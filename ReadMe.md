@@ -43,7 +43,8 @@ http://localhost:9090/graph
 * Follow the below steps in the same order:
     * Now open Browser (or any rest client like Postman) and invoke the following URL to see the output of Grafana login screen. 
     * Enter the default user id and password as "admin". 
-    * Once logged-in to home page, click the icon "Create a data source", click the "Select" button next to "Prometheus", enter the URL value as "http://localhost:9090/", click "Save & Test" button where you will get a confirmation in green background saying "Datasource updated".
+    * Once logged-in to home page, click the icon "Create a data source", click the "Select" button next to "Prometheus", enter the URL value as "http://localhost:9090/", click "Save & Test" button where you will get a confirmation in green background saying "Datasource updated". 
+    Note: Incase if your Prometheus is running on different machine (than localhost), please use the appropriate IP Address in the URL like this http://<IP>:9090
     * On the left hand side, click + (the first menu option) and Dashboard in the submenu. 
     * Click "Choose Visualization", select "Graph", in the "Query" tab, under "Metrics", enter the PromQL - http_server_requests_seconds_count and then the following similar screen shot will be visible.
     * Type "http_server_requests_seconds_count" in the text box and click "Execute" button which will show all the 3 endpoints (/actuator/prometheus, /welcome, /actuator) and their value indicating how many times these API's were invoked.
